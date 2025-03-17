@@ -1,0 +1,20 @@
+For the setup of this project you first need to clone the project in your device, use this link to do that; https://github.com/QUASAR378/DBMS.git
+
+Inorder toclone to the repo, open the command prompt and move to your desired directory and paste this; git clone https://github.com/QUASAR378/DBMS.git
+
+From there the project will be visible on your device but they won't run as they should ssince the necessary packages and modules haven't modules yet. For that do the following;
+
+While in the directory where you have cloned the project paste this onto the terminal; python -m venv venv ,this creates a virtual environment where the project can be run smoothly. 
+
+After that activate the environment using this code; venv\Scripts\activate , if everyone is using Windows that is...
+
+Paste this onto the terminal to install the django and mysql packages necessary for the project; pip install django djangorestframework mysqlclient
+
+Since the necessary apps and what not have already been created, just adjust the settings.py and any other modules to better suite your needs.After that run this to enable changes to the project;
+python manage.py makemigrations
+python manage.py migrate
+
+To run the server paste this onto the terminal; 
+python manage.py runserver
+
+This isn't the final piece of code, more adjustments will be made to better fit in with what will be done on the frontend
