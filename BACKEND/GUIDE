@@ -8,7 +8,7 @@ While in the directory where you have cloned the project paste this onto the ter
 
 After that activate the environment using this code; venv\Scripts\activate , if everyone is using Windows that is...
 
-Paste this onto the terminal to install the django and mysql packages necessary for the project; pip install django djangorestframework mysqlclient
+Paste this onto the terminal to install the django and mysql packages necessary for the project; pip install django djangorestframework mysqlclient and this to install corsheaders; pip install django-cors-headers
 
 Since the necessary apps and what not have already been created, just adjust the settings.py and any other modules to better suite your needs.After that run this to enable changes to the project;
 python manage.py makemigrations
