@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'HospitalClinicSystem',
         'USER': 'root',
-        'PASSWORD': 'paSSW08-D',
+        'PASSWORD': 'Malibu*0123.+-',
         'HOST': 'localhost',
         'PORT': '3306',
     }
