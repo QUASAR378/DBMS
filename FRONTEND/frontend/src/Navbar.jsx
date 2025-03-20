@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./styles.css";
 
-const Navbar = () => (
+const Navbar = () => {
+  return (
     <nav className="navbar">
-        <h1>Brik Shah Clinic</h1>
-        <ul>
-            <li><Link to="/">Dashboard</Link></li>
-            <li><Link to="/appointments">Appointments</Link></li>
-            <li><Link to="/login">Login</Link></li>
-        </ul>
+      <h1 className="logo">Brik Shah Clinic</h1>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/calendar">Appointments</Link></li>
+        <li><Link to="/login">Login</Link></li>
+      </ul>
     </nav>
-);
+  );
+};
 
 export default Navbar;

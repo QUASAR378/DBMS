@@ -1,0 +1,207 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Layout */
+  .app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: #0056b3;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li {
+    display: inline;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background: #004080;
+    padding: 20px;
+    height: 100vh;
+    color: white;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    display: block;
+    font-weight: bold;
+  }
+  
+  .sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  /* Page Containers */
+  .page-container {
+    background: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Authentication Pages */
+  .auth-container {
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .auth-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .auth-container button {
+    padding: 10px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-container button:hover {
+    background: #003f80;
+  }
+  
+  /* Calendar */
+  .calendar-container {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-wrapper {
+    margin-top: 20px;
+  }
+  
+  .calendar-filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .select-filter,
+  .input-filter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Appointment List */
+  .appointments-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .appointments-list li {
+    background: #e7f1ff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+  }
+  
+  .appointments-list li:hover {
+    background: #d1e7ff;
+  }
+  
+  /* Appointment Details */
+  .details-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container h2 {
+    text-align: center;
+  }
+  
+  .details-container p {
+    margin: 10px 0;
+  }
+  

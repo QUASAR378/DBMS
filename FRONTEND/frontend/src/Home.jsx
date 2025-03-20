@@ -1,31 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import AppointmentCalendar from "./pages/AppointmentCalendar";
-import Navbar from "./components/Navbar";
-import PrivateRoute from "./components/PrivateRoute";
+import "./styles.css";
 
-function App() {
-    return (
-        <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route 
-                    path="/appointments" 
-                    element={
-                        <PrivateRoute>
-                            <AppointmentCalendar />
-                        </PrivateRoute>
-                    } 
-                />
-            </Routes>
-        </Router>
-    );
-}
+const Home = () => {
+  return (
+    <div className="page-container">
+      <h1>Welcome to Brik Shah Clinic</h1>
+      <p>Manage your appointments easily and efficiently.</p>
+    </div>
+  );
+};
 
-export default App;
+export default Home;
