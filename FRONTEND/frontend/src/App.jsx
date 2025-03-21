@@ -6,19 +6,12 @@ import Signup from "./Signup.jsx";
 import AppointmentCalendar from "./Appointments.jsx";
 import Navbar from "./Navbar.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
-import "./styles.css";
+import "./styles.css"; 
+import BrikShahFacility from "./BrikShah.jsx";
 
 const App = () => {
     return (
-        <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/Login.jsx" element={<Login />} />
-                <Route path="/Signup.jsx" element={<Signup />} />
-                <Route path="/Appointments.jsx" element={<PrivateRoute><AppointmentCalendar /></PrivateRoute>} />
-            </Routes>
-        </Router>
+   <BrikShahFacility/>
     );
 };
 
