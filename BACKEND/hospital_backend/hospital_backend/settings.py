@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'HospitalClinicSystem',
         'USER': 'root',
-        'PASSWORD': 'Malibu*0123.+-',
+        'PASSWORD': 'paSSW08-D',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -130,5 +130,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React frontend URL
+    "http://localhost:5175",  # React frontend URL
 ]
