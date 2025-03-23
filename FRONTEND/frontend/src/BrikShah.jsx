@@ -1,8 +1,8 @@
 import React from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import "./Home.css";
+import "./BrikShahFacility.css";
 
-const Home = () => {
+const BrikShahFacility = () => {
   return (
     <div className="container">
       {/* Top Bar */}
@@ -56,4 +56,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default BrikShahFacility;

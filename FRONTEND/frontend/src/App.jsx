@@ -2,11 +2,23 @@ import React, { useState } from "react";
 import { User } from "lucide-react";
 
 import AuthModal from "./Authmodal.jsx";
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./Dashboard.jsx";
+import Login from "./Login.jsx";
+import Signup from "./Signup.jsx";
+
 import AppointmentCalendar from "./Appointments.jsx";
+import Navbar from "./Navbar.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
+import "./styles.css"; 
+import Home from "./Home.jsx";
 
 function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
+
 
   const handleOpenAuthModal = () => {
     setIsAuthModalOpen(true);
@@ -51,5 +63,12 @@ function App() {
     </>
   );
 }
+
+const App = () => {
+    return (
+   <Dashboard/>
+    );
+};
+
 
 export default App;
