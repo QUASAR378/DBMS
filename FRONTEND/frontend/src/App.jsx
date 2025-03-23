@@ -7,11 +7,12 @@ import AppointmentCalendar from "./Appointments.jsx";
 import Navbar from "./Navbar.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import "./styles.css"; 
-import BrikShahFacility from "./BrikShah.jsx";
+import Home from "./Home.jsx";
+
 
 const App = () => {
     return (
-   <BrikShahFacility/>
+   <Dashboard/>
     );
 };
 
