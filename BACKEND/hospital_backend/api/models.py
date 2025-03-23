@@ -2,9 +2,16 @@ from django.db import models
 
 class User(models.Model):
     username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=255)
     role = models.CharField(max_length=50, choices=[('doctor', 'Doctor'), ('operator', 'Operator')])
+    Firstname=models.CharField(max_length=20)
+    Lastname=models.CharField(max_length=20)
+    Email=models.EmailField()
+    Contact=models.CharField(max_length=12)
+    Password=models.CharField(max_length=15)
 
+    def _str_(self):
+        return f"{self.Firstname} {self.Lastname}"
+    
 class Doctor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=200)
