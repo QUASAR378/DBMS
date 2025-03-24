@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { User } from "lucide-react";
+import AuthModal from "./AuthModal.jsx";
 import "./Home.css";
 
 const Home = () => {
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+
   return (
     <div className="container">
       {/* Top Bar */}
@@ -16,8 +20,9 @@ const Home = () => {
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
+        <User className="auth-icon" onClick={() => setIsAuthOpen(true)} />
       </header>
-      
+
       {/* Treatment and Services Section */}
       <section id="services" className="services-section">
         <h2>Treatment and Services</h2>
@@ -28,7 +33,7 @@ const Home = () => {
           <div className="service-box">Pharmacy</div>
         </div>
       </section>
-      
+
       {/* Health Tips Section */}
       <section id="more" className="health-tips-section">
         <h2>Health Tips</h2>
@@ -43,7 +48,7 @@ const Home = () => {
           <button className="contact-btn">Contact Us</button>
         </div>
       </section>
-      
+
       {/* Footer Section */}
       <footer id="contact" className="footer-section">
         <h2>Contacts</h2>
@@ -52,6 +57,9 @@ const Home = () => {
         <div className="contact-info"><FaMapMarkerAlt className="icon" /> 123 Medical Street, Health City</div>
         <div className="footer-bottom">&copy; {new Date().getFullYear()} Brik Shah Facility. All rights reserved.</div>
       </footer>
+
+      {/* Authentication Modal */}
+      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} onLogin={() => setIsAuthOpen(false)} />
     </div>
   );
 };
