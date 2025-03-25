@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, email, role, password=None):
+    def create_user(self, username, email, role="operator", password=None):
         if not email:
             raise ValueError("Users must have an email address")
         if not username:
@@ -23,7 +23,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=100, unique=True)
     email = models.EmailField(unique=True)
-    role = models.CharField(max_length=50, choices=[('doctor', 'Doctor'), ('operator', 'Operator')])
+    role = models.CharField(max_length=50, choices=[('doctor', 'Doctor'), ('operator', 'Operator')], default='operator')
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     contact = models.CharField(max_length=12)
@@ -45,6 +45,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} ({self.role})"
+
 
 
 # Doctor model (linked to User)
