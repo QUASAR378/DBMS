@@ -1,8 +1,11 @@
 import React from "react";
 import { FaCalendarAlt, FaLaptopMedical, FaProcedures, FaFileMedical, FaHome, FaUser, FaCog, FaHandsHelping } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate(); // React Router navigation
+
   return (
     <div className="dashboard-container">
       {/* Top Bar */}
@@ -23,7 +26,7 @@ const Dashboard = () => {
 
       {/* Dashboard Sections */}
       <section className="dashboard-grid">
-        <div className="dashboard-box" onClick={() => window.location.href = "./Appointments.jsx"}>
+        <div className="dashboard-box" onClick={() => navigate("/appointments")}>
           <FaCalendarAlt className="section-icon" />
           <span>Appointment Calendar</span>
         </div>

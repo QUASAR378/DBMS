@@ -1,6 +1,7 @@
 from rest_framework import viewsets
-from .models import *
-from .serializers import *
+from rest_framework.response import Response
+from .models import Doctor, Patient, Appointment
+from .serializers import DoctorSerializer, PatientSerializer, AppointmentSerializer
 
 class DoctorViewSet(viewsets.ModelViewSet):
     queryset = Doctor.objects.all()
@@ -14,22 +15,8 @@ class AppointmentViewSet(viewsets.ModelViewSet):
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
 
-class EquipmentViewSet(viewsets.ModelViewSet):
-    queryset = Equipment.objects.all()
-    serializer_class = EquipmentSerializer
-
-class EquipmentBookingViewSet(viewsets.ModelViewSet):
-    queryset = EquipmentBooking.objects.all()
-    serializer_class = EquipmentBookingSerializer
-
-class TheatreViewSet(viewsets.ModelViewSet):
-    queryset = Theatre.objects.all()
-    serializer_class = TheatreSerializer
-
-class TheatreBookingViewSet(viewsets.ModelViewSet):
-    queryset = TheatreBooking.objects.all()
-    serializer_class = TheatreBookingSerializer
-
-class MedicalReportViewSet(viewsets.ModelViewSet):
-    queryset = MedicalReport.objects.all()
-    serializer_class = MedicalReportSerializer
+    # Override list method to return data React expects
+    def list(self, request):
+        appointments = Appointment.objects.all()
+        serializer = AppointmentSerializer(appointments, many=True)
+        return Response(serializer.data)
