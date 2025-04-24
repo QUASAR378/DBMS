@@ -43,7 +43,7 @@ The **BrikShah Clinic System** is a comprehensive, full-stack medical clinic man
 ## 🗃 Project Structure
 
 ```
-brikshah-clinic/
+dbms/
 │
 ├── backend/                   # Django backend project
 │   ├── appointments/          # Appointment management
@@ -62,9 +62,6 @@ brikshah-clinic/
 │   └── ...
 │
 ├── README.md
-├── requirements.txt           # Python dependencies
-├── package.json               # Frontend dependencies
-└── .env.example               # Environment variable sample
 ```
 
 ---
